@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm vụ 6 | Nguyên tắc đạo đức AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .box { max-width: 800px; width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 35px; box-sizing: border-box; animation: slideUp 0.6s ease-out; }
+        h2 { color: #fff; border-bottom: 2px solid #58a6ff; padding-bottom: 10px; margin-top: 0; }
+        p { line-height: 1.6; text-align: justify; }
+        .ethic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .ethic-item { background: #0d1117; padding: 15px; border-radius: 6px; font-size: 14px; border-left: 3px solid #ff7b72; }
+        .solution-box { background: #21262d; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #30363d; }
+        .back-link { display: inline-block; margin-top: 25px; color: #58a6ff; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Nhiệm vụ 6: Bộ nguyên tắc đạo đức &amp; Tư duy phản biện khi tương tác AI</h2>
+        <p>Thiết lập khung tham chiếu đạo đức là điều kiện tiên quyết khi cộng tác với AI trong môi trường học thuật chuyên nghiệp 2026[cite: 1]. Sinh viên cần vận dụng tư duy phản biện để đảm bảo tính chính danh và sự minh bạch của tri thức[cite: 1]:</p>
+        
+        <div class="ethic-grid">
+            <div class="ethic-item"><strong>Academic Integrity:</strong> Tuyệt đối không nộp trực tiếp nội dung thô từ AI; chỉ sử dụng AI như tác nhân hỗ trợ thực thi và gỡ lỗi mã nguồn[cite: 1].</div>
+            <div class="ethic-item"><strong>Transparency &amp; Citation:</strong> Trích dẫn rõ ràng tên mô hình (LLM), phiên bản và phạm vi can thiệp của AI trong báo cáo kỹ thuật[cite: 1].</div>
+            <div class="ethic-item"><strong>Data Privacy:</strong> Tuyệt đối không nạp các dữ liệu nhạy cảm hoặc mã nguồn bản quyền của khoa/trường vào các mô hình AI công cộng[cite: 1].</div>
+            <div class="ethic-item"><strong>IP Responsibility:</strong> Kiểm soát quyền sở hữu trí tuệ bằng cách biến đổi đầu ra của AI thành tri thức cá nhân có kiểm chứng[cite: 1].</div>
+        </div>
+
+        <div class="solution-box">
+            <strong>Thách thức đạo đức &amp; Giải pháp đề xuất ("Human-in-the-loop"):</strong>
+            <p style="margin-top: 8px; font-size: 14px;"><em>Thách thức:</em> Sự phụ thuộc quá mức vào các trợ lý AI có thể dẫn đến "mù quáng thuật toán", nơi sinh viên chấp nhận các sai số hệ thống và thiên lệch thuật toán (Algorithmic Bias) từ mô hình huấn luyện[cite: 1].</p>
+            <p style="margin-top: 8px; font-size: 14px;"><em>Giải pháp:</em> Luôn đặt con người giữ vai trò quyết định cuối cùng. Sử dụng kỹ thuật Prompt thách thức (Challenge Prompting) để buộc AI bộc lộ các giới hạn của nó, đồng thời đối soát chéo đầu ra của AI với giáo trình và tiêu chuẩn hiện hành (IEEE/ISO)[cite: 1].</p>
+        </div>
+        <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
+    </div>
+</body>
+</html>
