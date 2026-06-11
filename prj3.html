@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhiệm vụ 3 | Kỹ thuật Prompt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-color: #fcfbfa;
@@ -12,27 +13,12 @@
             --accent-color: #116ae8;
             --border-color: #b0c9f0;
         }
-
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            margin: 0; padding: 40px 20px; 
-            display: flex; flex-direction: column; align-items: center; 
-        }
-        .box { 
-            max-width: 850px; width: 100%; 
-            background: var(--card-bg); 
-            border: 1px solid var(--border-color); 
-            border-radius: 14px; padding: 35px; 
-            box-sizing: border-box; 
-            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); 
-            animation: slideUp 0.6s ease-out; 
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; position: relative; }
+        .box { max-width: 850px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; }
         h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; background: #fff; }
         th, td { border: 1px solid var(--border-color); padding: 12px; text-align: left; vertical-align: top; }
-        th { background-color: #f4f1ea; color: var(--text-color); }
+        th { background-color: #f4f1ea; color: var(--text-color); font-weight: bold; }
         .img-box { text-align: center; margin: 25px 0; }
         .img-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .back-link { display: inline-block; margin-top: 25px; color: var(--accent-color); text-decoration: none; font-weight: bold; }
@@ -41,16 +27,22 @@
     </style>
 </head>
 <body>
+
+    <a href="b03.pdf" download style="position: absolute; top: 40px; right: calc(50% - 425px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #116ae8; background-color: #ffffff; border: 2px solid #b0c9f0; text-decoration: none; font-weight: bold; width: 140px; height: 90px; border-radius: 12px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.08); transition: all 0.2s ease; z-index: 10;">
+        <i class="fa-solid fa-file-arrow-down" style="font-size: 24px; color: #116ae8; margin: 0;"></i>
+        <span style="font-size: 13px; text-align: center; line-height: 1.2;">Tải bài làm xuống</span>
+    </a>
+
     <div class="box">
-        <h2>Nhiệm vụ 3: Kỹ thuật Prompt Engineering & Phản hồi hệ thống</h2>
-        <p>Vận dụng kỹ nghệ Prompt Engineering có cấu trúc để điều khiển và khai thác tri thức chuyên sâu từ AI, tối ưu hóa các giải thuật kỹ thuật:</p>
+        <h2>Nhiệm vụ 3: Kỹ thuật Prompt Engineering &amp; Phản hồi hệ thống</h2>
+        <p>Vận dụng kỹ nghệ Prompt Engineering có cấu trúc để điều khiển và khai thác tri thức chuyên sâu từ AI, tối ưu hóa giải thuật:</p>
         
         <table>
             <thead>
                 <tr>
                     <th>TT</th>
                     <th>Prompt đúng công thức</th>
-                    <th>Sự khác biệt kỹ thuật</th>
+                    <th>Sự khác biệt hiệu quả</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,9 +64,8 @@
             </tbody>
         </table>
 
-        <!-- Chèn ảnh hình ảnh 3.1 -->
         <div class="img-box">
-            <p><em>Minh họa kết quả phân tích cấu trúc câu lệnh phản hồi từ AI:</em></p>
+            <p><em>Minh họa kết quả phân tích cấu trúc câu lệnh và dữ liệu kết xuất:</em></p>
             <img src="anh3.1.png" alt="Minh chứng Prompt Engineering">
         </div>
 
