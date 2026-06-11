@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm vụ 3 | Prompt Engineering</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .box { max-width: 850px; width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 35px; box-sizing: border-box; animation: slideUp 0.6s ease-out; }
+        h2 { color: #fff; border-bottom: 2px solid #58a6ff; padding-bottom: 10px; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+        th, td { border: 1px solid #30363d; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #21262d; color: #fff; }
+        code { background: #0d1117; padding: 2px 4px; border-radius: 4px; color: #ff7b72; }
+        .back-link { display: inline-block; margin-top: 25px; color: #58a6ff; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Nhiệm vụ 3: Vận dụng kỹ nghệ Prompt Engineering cấu trúc cao</h2>
+        <p>Bảng phân tích so sánh cấu trúc và hiệu quả thực tế giữa các câu lệnh Prompt kém và Prompt tuân thủ đúng công thức kỹ thuật hệ thống:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Prompt đúng công thức kỹ thuật nâng cao</th>
+                    <th>Phân tích tính khoa học &amp; Sự khác biệt cấu trúc</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>"Bạn là một chuyên gia về Computer Vision. Hãy tóm tắt [Link] cho sinh viên mới bắt đầu. Giải thích từng bước logic (Chain-of-Thought) để người mới cũng hình dung được..."[cite: 1]</td>
+                    <td>Thiết lập rõ vai trò chuyên gia, bối cảnh, giới hạn đối tượng và yêu cầu thuật toán suy luận từng bước (Chain-of-Thought), giúp kết quả chính xác, có cấu trúc học thuật trực quan và loại bỏ hiện tượng AI "ảo tưởng"[cite: 1].</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>"128-d face embeddings là gì? Hãy giải thích khái niệm kỹ thuật theo phong cách 'ELI5' (giải thích cho trẻ 5 tuổi). Ví dụ: Vector là một mũi tên; Embedding là một bản tóm tắt... Vậy 128-d embeddings là..."[cite: 1]</td>
+                    <td>Áp dụng kỹ thuật định dạng phong cách (ELI5) kết hợp ví dụ minh họa trực quan, ép AI chuyển đổi một khái niệm kỹ thuật phức tạp thành ngôn ngữ dễ hiểu mà không làm mất đi bản chất khoa học[cite: 1].</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>"Bạn là giảng viên đại học. Hãy tạo đề kiểm tra gồm 3 câu trắc nghiệm (dễ) và 2 câu tự luận (khó) về OpenCV. Định dạng kết quả dạng bảng: Câu hỏi | Đáp án | Giải thích."[cite: 1]</td>
+                    <td>Chủ động phân rã độ khó, chỉ định rõ vai trò chuyên gia và ép cấu trúc đầu ra dạng bảng giúp dữ liệu hiển thị khoa học, có tính phân loại sư phạm cao thay vì trả ra văn bản thuần lộn xộn[cite: 1].</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
+    </div>
+</body>
+</html>
