@@ -3,36 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhiệm vụ 5 | Sản xuất nội dung AI</title>
+    <title>Nhiệm vụ 5 | Nội dung đa phương tiện</title>
     <style>
-body { font-family: Arial, sans-serif; background-color: #f6f8fa; color: #24292f; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-.box { max-width: 800px; width: 100%; background: #ffffff; border: 1px solid #d0d7de; border-radius: 12px; padding: 35px; box-sizing: border-box; box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1); }
-h2 { color: #24292f; border-bottom: 2px solid #0969da; padding-bottom: 10px; margin-top: 0; }
+        :root {
+            --bg-color: #fcfbfa;
+            --card-bg: #ffffff;
+            --text-color: #1a2b4c;
+            --accent-color: #116ae8;
+            --border-color: #b0c9f0;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            margin: 0; padding: 40px 20px; 
+            display: flex; flex-direction: column; align-items: center; 
+        }
+        .box { 
+            max-width: 800px; width: 100%; 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 14px; padding: 35px; 
+            box-sizing: border-box; 
+            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); 
+            animation: slideUp 0.6s ease-out; 
+        }
+        h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
         p { line-height: 1.6; text-align: justify; }
-        ol { padding-left: 20px; line-height: 1.8; }
-        .spec-list { background: #0d1117; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #f0883e; }
-        .back-link { display: inline-block; margin-top: 25px; color: #58a6ff; text-decoration: none; font-weight: bold; }
+        ul { padding-left: 20px; line-height: 1.8; }
+        .img-container { text-align: center; margin: 25px 0; background: #f7f6f0; padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); }
+        .img-container img { max-width: 100%; height: auto; border-radius: 6px; margin: 10px 0; }
+        .back-link { display: inline-block; margin-top: 25px; color: var(--accent-color); text-decoration: none; font-weight: bold; }
         .back-link:hover { text-decoration: underline; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Nhiệm vụ 5: Khai thác AI trong sản xuất nội dung đa phương tiện</h2>
-        <p>Quy trình ứng dụng các công cụ trí tuệ nhân tạo để tối ưu hóa việc thiết kế và sản xuất sản phẩm truyền thông kỹ thuật:</p>
+        <h2>Nhiệm vụ 5: Thiết kế kịch bản &amp; Sản xuất nội dung đa phương tiện bằng AI</h2>
+        <p>Tập trung vào việc thiết kế và sản xuất nội dung đa phương tiện ứng dụng các công cụ trí tuệ nhân tạo tối ưu hiệu quả đồ án kỹ thuật:</p>
         
-        <ol>
-            <li><strong>Ý tưởng &amp; Kịch bản:</strong> Thiết kế các prompt nâng cao để xác định cấu trúc kịch bản và mục tiêu truyền thông rõ ràng[cite: 1].</li>
-            <li><strong>Sản xuất &amp; Tối ưu:</strong> Triển khai bằng các công cụ AI Generative, thực hiện lặp để kiểm soát tính nhất quán và tone giọng hệ thống[cite: 1].</li>
-            <li><strong>Sản phẩm cuối cùng:</strong> Tạo ra sản phẩm đa phương tiện chất lượng cao phục vụ cho mục tiêu giáo dục kỹ thuật[cite: 1].</li>
-        </ol>
+        <ul>
+            <li><strong>5.1. Ý tưởng & Kịch bản:</strong> Quá trình lên ý tưởng được thực hiện thông qua việc thiết kế các prompt nâng cao để xác định cấu trúc kịch bản và mục tiêu truyền thông.</li>
+            <li><strong>5.2. Sản xuất & Tối ưu:</strong> Triển khai sản xuất bằng các công cụ AI Generative, thực hiện lặp để kiểm soát tính nhất quán và tone giọng.</li>
+            <li><strong>5.3. Sản phẩm cuối cùng:</strong> Khai thác trí tuệ nhân tạo để tạo ra sản phẩm đa phương tiện chất lượng cao cho mục tiêu giáo dục.</li>
+        </ul>
 
-        <div class="spec-list">
-            <strong>Tiêu chuẩn đánh giá chất lượng sản phẩm (Ví dụ dự án Scream Meter):</strong><br>
-            • <strong>Bố cục &amp; Phân cấp thị giác chuyên nghiệp:</strong> Logic dòng chảy dữ liệu rõ ràng (Thu nhận → Số hóa → Xử lý → Hiển thị), phân màu các khối khoa học[cite: 1].<br>
-            • <strong>Nội dung học thuật chuẩn xác:</strong> Sử dụng đúng thuật toán và công thức xử lý tín hiệu thực tế ($L = 20 \log_{10}(P/P_0)$), bộ nhớ EEPROM, và cấu trúc vi điều khiển chuyên ngành[cite: 1].<br>
-            • <strong>Chất lượng đồ họa đồng nhất:</strong> Hình ảnh minh họa 3D isometric cho linh kiện phần cứng (Arduino, Chip, Microphone) sắc nét, hiện đại[cite: 1].
+        <!-- Hiển thị tuần tự các ảnh 5.1, 5.2, 5.3 -->
+        <div class="img-container">
+            <strong>Minh họa quy trình thu nhận và số hóa dữ liệu đồ án:</strong><br>
+            <img src="anh5.1.png" alt="Ý tưởng kịch bản">
+            <img src="anh5.2.png" alt="Sản xuất tối ưu" style="margin-top: 20px;">
+            <img src="anh5.3.jpg" alt="Sản phẩm cuối cùng" style="margin-top: 20px;">
         </div>
+
+        <p><strong>Tiêu chuẩn sản phẩm đồ án đạt được:</strong></p>
+        <p>➔ <strong>Bố cục & Phân cấp thị giác chuyên nghiệp:</strong> Logic dòng chảy từ trên xuống dưới (Thu nhận -> Số hóa -> Xử lý -> Hiển thị) cực kỳ rõ ràng, phân màu các khối khoa học.</p>
+        <p>➔ <strong>Nội dung học thuật chuẩn xác:</strong> Sử dụng đúng thuật toán xử lý tín hiệu thực tế (Công thức Logarit cường độ âm thanh $L=20 \times \log_{10}(P/P_0)$, bộ nhớ EEPROM, vi điều khiển) bám sát chuyên ngành.</p>
+        <p>➔ <strong>Chất lượng đồ họa cao & Đồng nhất:</strong> Hình ảnh minh họa 3D isometric cho phần cứng (Arduino, Chip, Mic) sắc nét, tạo cảm giác hiện đại và tăng tính thuyết phục cho sản phẩm truyền thông số.</p>
+
         <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
     </div>
 </body>
