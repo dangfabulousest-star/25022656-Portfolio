@@ -14,24 +14,23 @@
             --border-color: #b0c9f0;
         }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; }
+        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; display: flex; flex-direction: column; }
         h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
         p { line-height: 1.6; text-align: justify; }
         ul { padding-left: 20px; line-height: 1.8; }
         .img-box { text-align: center; margin: 25px 0; }
         .img-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .back-link { display: inline-block; margin-top: 25px; color: var(--accent-color); text-decoration: none; font-weight: bold; }
+        
+        .download-btn { display: flex; align-items: center; justify-content: center; gap: 10px; color: #ffffff; background-color: var(--accent-color); border: 1px solid var(--accent-color); text-decoration: none; font-weight: bold; padding: 12px 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.15); transition: all 0.2s ease; margin: 30px auto 15px auto; width: fit-content; }
+        .download-btn:hover { background-color: #0d54b8; transform: translateY(-2px); }
+        .download-btn i { color: #ffffff; margin: 0; font-size: 18px; }
+        
+        .back-link { display: inline-block; margin: 10px auto 0 auto; color: var(--accent-color); text-decoration: none; font-weight: bold; width: fit-content; }
         .back-link:hover { text-decoration: underline; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-
-    <a href="b02.pdf" download style="position: fixed; top: 20px; right: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: #116ae8; background-color: #ffffff; border: 2px solid #b0c9f0; text-decoration: none; font-weight: bold; width: 130px; height: 85px; border-radius: 12px; box-shadow: 0 4px 16px rgba(17, 106, 232, 0.12); transition: all 0.2s ease; z-index: 9999;">
-        <i class="fa-solid fa-file-arrow-down" style="font-size: 22px; color: #116ae8; margin: 0;"></i>
-        <span style="font-size: 12px; text-align: center; line-height: 1.2;">Tải bài làm xuống</span>
-    </a>
-
     <div class="box">
         <h2>Nhiệm vụ 2: Tiêu chí kiểm chứng nguồn tin học thuật chuyên sâu</h2>
         <p>Khai thác tri thức học thuật đòi hỏi khả năng kết hợp các toán tử nâng cao như <code>site:edu.vn</code> hoặc <code>filetype:pdf</code> để sàng lọc nhiễu thông tin và tiếp cận trực tiếp dữ liệu nguồn. Chiến lược này không chỉ tối ưu thời gian tìm kiếm mà còn đảm bảo tính xác thực của tài liệu tham khảo.</p>
@@ -54,6 +53,9 @@
             <img src="anh2.2.png" alt="Mô hình đánh giá nguồn tin">
         </div>
 
+        <a href="b02.pdf" download class="download-btn">
+            <i class="fa-solid fa-file-arrow-down"></i> Tải bài làm xuống (PDF)
+        </a>
         <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
     </div>
 </body>
