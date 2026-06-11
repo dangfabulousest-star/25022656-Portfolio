@@ -4,111 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhiệm vụ 1 | Kiến trúc thư mục</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Định nghĩa bộ màu Trắng Cream & Xanh biển Wix ở đây */
         :root {
-            --bg-color: #fcfbfa;       /* Nền trắng kem nhạt Wix */
-            --card-bg: #ffffff;       /* Khung trắng tinh */
-            --text-color: #1a2b4c;     /* Chữ xanh đen */
-            --accent-color: #116ae8;   /* Xanh biển Wix */
-            --border-color: #b0c9f0;   /* Viền xanh biển nhạt */
+            --bg-color: #fcfbfa;
+            --card-bg: #ffffff;
+            --text-color: #1a2b4c;
+            --accent-color: #116ae8;
+            --border-color: #b0c9f0;
         }
-
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            margin: 0; 
-            padding: 40px 20px; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
-        
-        .box { 
-            max-width: 800px; 
-            width: 100%; 
-            background: var(--card-bg); 
-            border: 1px solid var(--border-color); 
-            border-radius: 14px; 
-            padding: 35px; 
-            box-sizing: border-box; 
-            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); 
-            animation: slideUp 0.6s ease-out; 
-        }
-        
-        h2 { 
-            color: var(--text-color); 
-            border-bottom: 2px solid var(--accent-color); 
-            padding-bottom: 10px; 
-            margin-top: 0; 
-        }
-        
-        p { 
-            line-height: 1.6; 
-            text-align: justify; 
-            margin-bottom: 15px;
-        }
-        
-        /* Hộp hiển thị ảnh minh chứng căn giữa */
-        .img-box {
-            text-align: center;
-            margin: 25px 0;
-        }
-
-        .img-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .img-box img:hover {
-            transform: scale(1.02);
-            border-color: var(--accent-color);
-        }
-
-        .tech-specs { 
-            background: #f4f1ea; /* Nền kem đậm hơn cho khung kỹ thuật */
-            padding: 15px; 
-            border-radius: 8px; 
-            margin: 20px 0; 
-            border-left: 4px solid var(--accent-color); 
-        }
-        
-        .back-link { 
-            display: inline-block; 
-            margin-top: 15px; 
-            color: var(--accent-color); 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-        
-        .back-link:hover { 
-            text-decoration: underline; 
-        }
-        
-        @keyframes slideUp { 
-            from { opacity: 0; transform: translateY(30px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; position: relative; }
+        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; }
+        h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
+        p { line-height: 1.6; text-align: justify; }
+        .img-box { text-align: center; margin: 25px 0; }
+        .img-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .tech-specs { background: #f4f1ea; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-color); }
+        .back-link { display: inline-block; margin-top: 25px; color: var(--accent-color); text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
+
+    <a href="b01.pdf" download style="position: absolute; top: 40px; right: calc(50% - 400px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #116ae8; background-color: #ffffff; border: 2px solid #b0c9f0; text-decoration: none; font-weight: bold; width: 140px; height: 90px; border-radius: 12px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.08); transition: all 0.2s ease; z-index: 10;">
+        <i class="fa-solid fa-file-arrow-down" style="font-size: 24px; color: #116ae8; margin: 0;"></i>
+        <span style="font-size: 13px; text-align: center; line-height: 1.2;">Tải bài làm xuống</span>
+    </a>
+
     <div class="box">
         <h2>Nhiệm vụ 1: Hệ thống tổ chức dữ liệu & Kiến trúc thư mục</h2>
         <p>Trong môi trường học thuật và kỹ thuật chuyên nghiệp, việc thiết lập một kiến trúc thư mục phân cấp là yếu tố then chốt để đảm bảo tính truy xuất và quản lý dữ liệu hiệu quả. Hệ thống được xây dựng dựa trên cấu trúc hình cây, phân loại từ cấp độ học phần đến từng bài nhiệm vụ cụ thể, giúp giảm thiểu sai sót trong quá trình lưu trữ.</p>
         <p>Logic đặt tên file tuân thủ quy tắc <strong>[MSSV]_[HoTen]_[MaBaiTap]</strong> (ví dụ: <code>25022656_TruongKhaiDang_B01.pdf</code>). Đặc biệt, hệ thống áp dụng kỹ thuật loại bỏ dấu tiếng Việt và khoảng trắng trong tên tệp và thư mục. Phương pháp này đảm bảo tính tương thích đa nền tảng (cross-platform compatibility), ngăn ngừa lỗi encoding khi đồng bộ hóa giữa các hệ điều hành (Windows, macOS, Linux) hoặc khi triển khai trên các hệ thống máy chủ và lưu trữ đám mây.</p>
         
-        <!-- Đã tích hợp ảnh anh1.png hiển thị chuẩn vào đây -->
         <div class="img-box">
-            <img src="anh1.png" alt="Minh chứng cấu trúc quản lý tệp và thư mục">
+            <p><em>Minh họa cấu trúc quản lý tệp và quy trình đặt tên tệp chuẩn hóa:</em></p>
+            <img src="anh1.png" alt="Kiến trúc thư mục">
         </div>
 
         <div class="tech-specs">
-            <strong>Tiêu chuẩn kỹ thuật đạt được:</strong><br>
+            <strong>Tiêu chuẩn kỹ thuật:</strong><br>
             • Mã hóa tệp: UTF-8 (No BOM)<br>
             • Quy tắc ký tự: A-Z, 0-9, Underscore (_)<br>
             • Tương thích: Đa nền tảng, Cloud-ready
