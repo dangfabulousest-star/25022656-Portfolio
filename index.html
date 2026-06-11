@@ -3,56 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhiệm vụ 1 | Kiến trúc thư mục</title>
+    <title>TRƯƠNG KHẢI ĐĂNG | E-Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #fcfbfa;
-            --card-bg: #ffffff;
-            --text-color: #1a2b4c;
-            --accent-color: #116ae8;
-            --border-color: #b0c9f0;
+            --bg-color: #fcfbfa;       /* Màu trắng kem nhạt nền Wix */
+            --card-bg: #ffffff;       /* Thẻ màu trắng tinh */
+            --text-color: #1a2b4c;     /* Chữ xanh đen đậm */
+            --accent-color: #116ae8;   /* Xanh biển Wix đặc trưng */
+            --border-color: #b0c9f0;   /* Viền xanh biển nhạt */
         }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; display: flex; flex-direction: column; }
-        h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
-        p { line-height: 1.6; text-align: justify; }
-        .img-box { text-align: center; margin: 25px 0; }
-        .img-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .tech-specs { background: #f4f1ea; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--accent-color); }
-        
-        /* Cấu trúc nút tải xuống tĩnh đặt ở cuối */
-        .download-btn { display: flex; align-items: center; justify-content: center; gap: 10px; color: #ffffff; background-color: var(--accent-color); border: 1px solid var(--accent-color); text-decoration: none; font-weight: bold; padding: 12px 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.15); transition: all 0.2s ease; margin: 30px auto 15px auto; width: fit-content; }
-        .download-btn:hover { background-color: #0d54b8; transform: translateY(-2px); }
-        .download-btn i { color: #ffffff; margin: 0; font-size: 18px; }
-        
-        .back-link { display: inline-block; margin: 10px auto 0 auto; color: var(--accent-color); text-decoration: none; font-weight: bold; width: fit-content; }
-        .back-link:hover { text-decoration: underline; }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInPage 0.6s ease-out;
+            padding: 0 20px 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-box {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: -60px;
+        }
+
+        .banner-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(17, 106, 232, 0.15);
+            z-index: 2;
+            background: #fff;
+            margin-bottom: 15px;
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            z-index: 2;
+        }
+
+        header h1 {
+            color: var(--text-color);
+            font-size: 32px;
+            margin: 5px 0;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        header p {
+            color: var(--accent-color);
+            font-size: 16px;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .intro-box, .evaluation-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 40px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06);
+        }
+
+        .intro-box p { text-align: justify; }
+
+        .intro-box h2, .evaluation-box h2 {
+            color: var(--text-color);
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-color);
+            box-sizing: border-box;
+            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 20px rgba(17, 106, 232, 0.15);
+        }
+
+        .card i {
+            font-size: 38px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            color: var(--text-color);
+            margin: 10px 0;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 0;
+            color: #53647e;
+            text-align: center;
+        }
+
+        .eval-section {
+            margin-bottom: 20px;
+            padding: 18px;
+            background: #f7f6f0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .eval-section:last-child { margin-bottom: 0; }
+
+        .eval-section h3 {
+            color: var(--text-color);
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .eval-section h3 i { color: var(--accent-color); }
+
+        p { line-height: 1.6; font-size: 15px; margin: 0; text-align: justify; }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+        }
+
+        footer p { font-style: italic; color: #53647e; margin-bottom: 15px; text-align: center; }
+
+        .contact-info { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+        .contact-item {
+            display: flex; align-items: center; gap: 8px;
+            color: var(--accent-color); text-decoration: none; font-size: 14px;
+            background: #ffffff; padding: 8px 16px; border-radius: 20px;
+            border: 1px solid var(--border-color); transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .contact-item:hover {
+            background: var(--accent-color); color: #fff; transform: translateY(-2px);
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>Nhiệm vụ 1: Hệ thống tổ chức dữ liệu &amp; Kiến trúc thư mục</h2>
-        <p>Trong môi trường học thuật và kỹ thuật chuyên nghiệp, việc thiết lập một kiến trúc thư mục phân cấp là yếu tố then chốt để đảm bảo tính truy xuất và quản lý dữ liệu hiệu quả. Hệ thống được xây dựng dựa trên cấu trúc hình cây, phân loại từ cấp độ học phần đến từng bài nhiệm vụ cụ thể, giúp giảm thiểu sai sót trong quá trình lưu trữ.</p>
-        <p>Logic đặt tên file tuân thủ quy tắc <strong>[MSSV]_[HoTen]_[MaBaiTap]</strong> (ví dụ: <code>25022656_TruongKhaiDang_B01.pdf</code>). Đặc biệt, hệ thống áp dụng kỹ thuật loại bỏ dấu tiếng Việt và khoảng trắng trong tên tệp và thư mục. Phương pháp này đảm bảo tính tương thích đa nền tảng (cross-platform compatibility), ngăn ngừa lỗi encoding khi đồng bộ hóa giữa các hệ điều hành (Windows, macOS, Linux) hoặc khi triển khai trên các hệ thống máy chủ và lưu trữ đám mây.</p>
-        
-        <div class="img-box">
-            <p><em>Minh họa cấu trúc quản lý tệp và quy trình đặt tên tệp chuẩn hóa:</em></p>
-            <img src="anh1.png" alt="Kiến trúc thư mục">
-        </div>
 
-        <div class="tech-specs">
-            <strong>Tiêu chuẩn kỹ thuật:</strong><br>
-            • Mã hóa tệp: UTF-8 (No BOM)<br>
-            • Quy tắc ký tự: A-Z, 0-9, Underscore (_)<br>
-            • Tương thích: Đa nền tảng, Cloud-ready
-        </div>
-
-        <a href="b01.pdf" download class="download-btn">
-            <i class="fa-solid fa-file-arrow-down"></i> Tải bài làm xuống (PDF)
-        </a>
-        <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
+    <div class="banner-box">
+        <img src="nen.png" alt="Banner nền">
     </div>
+
+    <div class="main-container">
+        <div class="avatar-box">
+            <img src="face.png" alt="Trương Khải Đăng">
+        </div>
+
+        <header>
+            <h1>TRƯƠNG KHẢI ĐĂNG</h1>
+            <p>Sinh viên ngành Tự Động Hóa | Đại học Công Nghệ - ĐHQGHN</p>
+        </header>
+
+        <div class="intro-box">
+            <h2>Giới thiệu bản thân & Định hướng</h2>
+            <p>Hiện đang là sinh viên năm nhất ngành Tự Động Hóa, trường Đại học Công Nghệ, Đại học Quốc gia Hà Nội. Đam mê thể thao, công nghệ kỹ thuật, đặc biệt là xây dựng và chế tạo máy móc, robot điều khiển.</p>
+            <p style="margin-top: 15px;"><strong>Định hướng tương lai:</strong> Nâng cao hiểu biết chuyên sâu về các hệ thống điều khiển, robot và phát triển phần mềm nhúng thông qua các bài thực hành phòng thí nghiệm nâng cao và chương trình học bám sát thực tiễn công nghiệp.</p>
+        </div>
+
+        <h2 style="color: var(--text-color); align-self: flex-start; margin-bottom: 15px; font-size: 20px;">Mục lục học phần & Các dự án thành phần</h2>
+        <div class="grid-container">
+            <a href="prj1.html" class="card">
+                <i class="fa-solid fa-sitemap"></i>
+                <h3>Nhiệm vụ 1</h3>
+                <p>Hệ thống tổ chức dữ liệu & Kiến trúc thư mục chuẩn hóa</p>
+            </a>
+
+            <a href="prj2.html" class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Nhiệm vụ 2</h3>
+                <p>Tiêu chí kiểm chứng nguồn tin học thuật chuyên sâu</p>
+            </a>
+
+            <a href="prj3.html" class="card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Nhiệm vụ 3</h3>
+                <p>Kỹ nghệ cấu trúc câu lệnh Prompt Engineering</p>
+            </a>
+
+            <a href="prj4.html" class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Nhiệm vụ 4</h3>
+                <p>Hợp tác trực tuyến & Quản trị luồng công việc bất đồng bộ</p>
+            </a>
+
+            <a href="prj5.html" class="card">
+                <i class="fa-solid fa-photo-film"></i>
+                <h3>Nhiệm vụ 5</h3>
+                <p>Thiết kế kịch bản & Sản xuất nội dung đa phương tiện bằng AI</p>
+            </a>
+
+            <a href="prj6.html" class="card">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Nhiệm vụ 6</h3>
+                <p>Bộ nguyên tắc đạo đức & Tư duy phản biện khi tương tác với AI</p>
+            </a>
+        </div>
+
+        <div class="evaluation-box">
+            <h2>Tổng kết & Đánh giá bản thân</h2>
+            
+            <div class="eval-section">
+                <h3><i class="fas fa-graduation-cap"></i> 8.1. Kiến thức & Kỹ năng đạt được</h3>
+                <p>Học phần đã tạo bước đột phá lớn trong tư duy quản trị dữ liệu và khai thác công nghệ số. Bản thân đã làm chủ kỹ năng tối ưu hóa câu lệnh (Prompt Engineering) qua các kỹ thuật nâng cao (Chain-of-Thought, ELI5), cấu trúc quy trình làm việc nhóm bất đồng bộ trên Trello, và thiết lập hệ thống tệp tin khoa học theo tư duy logic hệ thống.</p>
+            </div>
+
+            <div class="eval-section" style="margin-top: 20px;">
+                <h3><i class="fas fa-triangle-exclamation"></i> 8.2. Thách thức & Bài học kinh nghiệm</h3>
+                <p><strong>Thách thức:</strong> Vượt qua ranh giới giữa việc dùng AI như công cụ tra cứu thông thường sang việc biến AI thành cộng sự đắc lực để gỡ lỗi mã nguồn và tối ưu giải thuật mà vẫn đảm bảo tính chính trực học thuật.</p>
+                <p style="margin-top: 8px;"><strong>Bài học:</strong> Sự phát triển của Generative AI không thay thế tư duy kỹ sư, mà trái lại, đòi hỏi năng lực kiểm chứng, phản biện đa chiều và ra quyết định chính xác dựa trên nền tảng kiến thức cốt lõi.</p>
+            </div>
+
+            <div class="eval-section" style="margin-top: 20px;">
+                <h3><i class="fas fa-chart-line"></i> 8.3. Định hướng ứng dụng tương lai</h3>
+                <p>Những kỹ năng số và tư duy Prompt Engineering tích lũy được sẽ là bệ phóng vững chắc để ứng dụng trực tiếp vào việc tối ưu hóa mã nguồn nhúng cho vi điều khiển, xây dựng các mô hình thị giác máy tính (Computer Vision), xử lý dữ liệu cảm biến và phát triển các hệ thống điều khiển tự động thông minh trong các đồ án chuyên ngành tiếp theo.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Nếu có thắc mắc gì hãy liên hệ em qua các thông tin bên dưới ạ.</p>
+            <div class="contact-info">
+                <a href="mailto:truongkhaidang13@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> truongkhaidang13@gmail.com
+                </a>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> 0975346310
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-university"></i> ĐH Công Nghệ - ĐHQGHN
+                </div>
+            </div>
+            <p style="margin-top: 25px; font-size: 12px; font-style: normal; color: #53647e;">&copy; 2026 Truong Khai Dang. All rights reserved.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
