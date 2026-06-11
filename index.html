@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRƯƠNG KHẢI ĐĂNG | E-Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Thêm thư viện FontAwesome bản mới nhất để hiện icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #f6f8fa;       /* Nền trắng xám nhạt */
-            --card-bg: #ffffff;       /* Thẻ màu trắng tinh */
-            --text-color: #24292f;     /* Chữ màu đen xám */
-            --accent-color: #0969da;   /* Xanh công nghệ chuẩn */
-            --accent-hover: #0c50a5;
-            --border-color: #d0d7de;   /* Đường viền mảnh */
+            --bg-color: #fcfbfa;       /* Màu trắng kem nhạt (Cream) nền Wix */
+            --card-bg: #ffffff;       /* Thẻ màu trắng tinh khiết */
+            --text-color: #1a2b4c;     /* Chữ màu xanh đen đậm quý phái */
+            --accent-color: #116ae8;   /* Xanh biển Wix đặc trưng */
+            --border-color: #b0c9f0;   /* Viền xanh biển nhạt */
+            --footer-bg: #f4f1ea;     /* Khung chân trang màu kem đậm hơn chút */
         }
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            margin: 0; padding: 40px 20px;
+            margin: 0; padding: 0;
             display: flex; flex-direction: column; align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
@@ -32,41 +33,76 @@
             flex-direction: column;
             align-items: center;
             animation: fadeInPage 0.6s ease-out;
+            padding: 0 20px 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .banner-box {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: -60px;
+        }
+
+        .banner-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--card-bg);
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(17, 106, 232, 0.15);
+            z-index: 2;
+            background: #fff;
+            margin-bottom: 15px;
+        }
+
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         header {
             text-align: center;
             margin-bottom: 40px;
+            z-index: 2;
         }
 
         header h1 {
-            color: #24292f;
+            color: var(--text-color);
             font-size: 32px;
-            margin-bottom: 5px;
+            margin: 5px 0;
             letter-spacing: 1px;
+            font-weight: 700;
         }
 
         header p {
             color: var(--accent-color);
             font-size: 16px;
             margin: 5px 0;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .intro-box {
+        .intro-box, .evaluation-box {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 30px;
             margin-bottom: 40px;
             width: 100%;
             box-sizing: border-box;
-            text-align: justify;
-            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
+            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06);
         }
 
-        .intro-box h2 {
-            color: #24292f;
+        .intro-box h2, .evaluation-box h2 {
+            color: var(--text-color);
             font-size: 20px;
             margin-top: 0;
             border-bottom: 2px solid var(--accent-color);
@@ -84,66 +120,61 @@
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 14px;
+            padding: 30px 20px;
             text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             cursor: pointer;
             text-decoration: none;
             color: var(--text-color);
             box-sizing: border-box;
-            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
+            box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .card:hover {
             transform: translateY(-6px);
             border-color: var(--accent-color);
-            box-shadow: 0 8px 16px rgba(9, 105, 218, 0.15);
+            box-shadow: 0 10px 20px rgba(17, 106, 232, 0.15);
         }
 
+        /* Định dạng hiển thị Icon chuẩn xác */
         .card i {
-            font-size: 36px;
+            font-size: 38px;
             color: var(--accent-color);
             margin-bottom: 15px;
+            display: inline-block;
         }
 
         .card h3 {
-            color: #24292f;
+            color: var(--text-color);
             margin: 10px 0;
-            font-size: 18px;
+            font-size: 19px;
+            font-weight: 700;
         }
 
         .card p {
             font-size: 14px;
             margin: 0;
-            color: #57606a;
-        }
-
-        .evaluation-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
+            color: #53647e;
+            text-align: center;
         }
 
         .eval-section {
             margin-bottom: 20px;
-            padding: 15px;
-            background: var(--bg-color);
+            padding: 18px;
+            background: #f7f6f0; /* Màu nền kem nhạt cho các khung nhỏ */
             border-radius: 8px;
             border-left: 4px solid var(--accent-color);
         }
 
-        .eval-section:last-child {
-            margin-bottom: 0;
-        }
+        .eval-section:last-child { margin-bottom: 0; }
 
         .eval-section h3 {
-            color: #24292f;
+            color: var(--text-color);
             font-size: 16px;
             margin-top: 0;
             margin-bottom: 8px;
@@ -152,19 +183,13 @@
             gap: 10px;
         }
 
-        p {
-            line-height: 1.6;
-            font-size: 15px;
-            margin: 0;
-            text-align: justify;
+        .eval-section h3 i {
+            color: var(--accent-color);
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 35px 0;
-        }
+        p { line-height: 1.6; font-size: 15px; margin: 0; text-align: justify; }
+
+        hr { border: 0; height: 1px; background: var(--border-color); margin: 35px 0; }
 
         footer {
             text-align: center;
@@ -174,39 +199,20 @@
             padding-top: 30px;
         }
 
-        footer p {
-            font-style: italic;
-            color: #57606a;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+        footer p { font-style: italic; color: #53647e; margin-bottom: 15px; text-align: center; }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+        .contact-info { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-size: 14px;
-            background: #ffffff;
-            padding: 8px 16px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex; align-items: center; gap: 8px;
+            color: var(--accent-color); text-decoration: none; font-size: 14px;
+            background: #ffffff; padding: 8px 16px; border-radius: 20px;
+            border: 1px solid var(--border-color); transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         }
 
         .contact-item:hover {
-            background: var(--accent-color);
-            color: #fff;
-            transform: translateY(-2px);
+            background: var(--accent-color); color: #fff; transform: translateY(-2px);
         }
 
         @keyframes fadeInPage {
@@ -217,9 +223,17 @@
 </head>
 <body>
 
+    <div class="banner-box">
+        <img src="nen.png" alt="Banner nền">
+    </div>
+
     <div class="main-container">
+        <div class="avatar-box">
+            <img src="face.png" alt="Trương Khải Đăng">
+        </div>
+
         <header>
-            <h1>TRƯƠNG KHẢI ĐĂNG'S PORTFOLIO</h1>
+            <h1>TRƯƠNG KHẢI ĐĂNG</h1>
             <p>Sinh viên ngành Tự Động Hóa | Đại học Công Nghệ - ĐHQGHN</p>
         </header>
 
@@ -229,48 +243,47 @@
             <p style="margin-top: 15px;"><strong>Định hướng tương lai:</strong> Nâng cao hiểu biết chuyên sâu về các hệ thống điều khiển, robot và phát triển phần mềm nhúng thông qua các bài thực hành phòng thí nghiệm nâng cao và chương trình học bám sát thực tiễn công nghiệp.</p>
         </div>
 
-        <h2 style="color: #24292f; align-self: flex-start; margin-bottom: 15px; font-size: 20px;">Mục lục học phần & Các dự án thành phần</h2>
+        <h2 style="color: var(--text-color); align-self: flex-start; margin-bottom: 15px; font-size: 20px;">Mục lục học phần & Các dự án thành phần</h2>
         <div class="grid-container">
-            <!-- Đã sửa liên kết ứng với tên prj.html mới của bạn -->
             <a href="prj1.html" class="card">
-                <i class="fas fa-folder-tree"></i>
+                <i class="fa-solid fa-sitemap"></i>
                 <h3>Nhiệm vụ 1</h3>
                 <p>Hệ thống tổ chức dữ liệu & Kiến trúc thư mục chuẩn hóa</p>
             </a>
 
             <a href="prj2.html" class="card">
-                <i class="fas fa-shield-halved"></i>
+                <i class="fa-solid fa-shield-halved"></i>
                 <h3>Nhiệm vụ 2</h3>
                 <p>Tiêu chí kiểm chứng nguồn tin học thuật chuyên sâu</p>
             </a>
 
             <a href="prj3.html" class="card">
-                <i class="fas fa-brain"></i>
+                <i class="fa-solid fa-gears"></i>
                 <h3>Nhiệm vụ 3</h3>
                 <p>Kỹ nghệ cấu trúc câu lệnh Prompt Engineering</p>
             </a>
 
             <a href="prj4.html" class="card">
-                <i class="fas fa-users-gear"></i>
+                <i class="fa-solid fa-laptop-code"></i>
                 <h3>Nhiệm vụ 4</h3>
                 <p>Hợp tác trực tuyến & Quản trị luồng công việc bất đồng bộ</p>
             </a>
 
             <a href="prj5.html" class="card">
-                <i class="fas fa-photo-film"></i>
+                <i class="fa-solid fa-photo-film"></i>
                 <h3>Nhiệm vụ 5</h3>
                 <p>Thiết kế kịch bản & Sản xuất nội dung đa phương tiện bằng AI</p>
             </a>
 
             <a href="prj6.html" class="card">
-                <i class="fas fa-scale-balanced"></i>
+                <i class="fa-solid fa-scale-balanced"></i>
                 <h3>Nhiệm vụ 6</h3>
                 <p>Bộ nguyên tắc đạo đức & Tư duy phản biện khi tương tác với AI</p>
             </a>
         </div>
 
         <div class="evaluation-box">
-            <h2 style="color: #24292f; font-size: 20px; margin-top: 0; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px;">Tổng kết & Đánh giá bản thân</h2>
+            <h2>Tổng kết & Đánh giá bản thân</h2>
             
             <div class="eval-section">
                 <h3><i class="fas fa-graduation-cap"></i> 8.1. Kiến thức & Kỹ năng đạt được</h3>
@@ -302,7 +315,7 @@
                     <i class="fas fa-university"></i> ĐH Công Nghệ - ĐHQGHN
                 </div>
             </div>
-            <p style="margin-top: 25px; font-size: 12px; font-style: normal; color: #57606a;">&copy; 2026 Truong Khai Dang. All rights reserved.</p>
+            <p style="margin-top: 25px; font-size: 12px; font-style: normal; color: #53647e;">&copy; 2026 Truong Khai Dang. All rights reserved.</p>
         </footer>
     </div>
 
