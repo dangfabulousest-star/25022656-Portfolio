@@ -13,7 +13,7 @@
             --accent-color: #116ae8;
             --border-color: #b0c9f0;
         }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; position: relative; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
         .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; }
         h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
         p { line-height: 1.6; text-align: justify; }
@@ -28,12 +28,12 @@
 <body>
 
     <a href="b01.pdf" download style="position: fixed; top: 20px; right: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: #116ae8; background-color: #ffffff; border: 2px solid #b0c9f0; text-decoration: none; font-weight: bold; width: 130px; height: 85px; border-radius: 12px; box-shadow: 0 4px 16px rgba(17, 106, 232, 0.12); transition: all 0.2s ease; z-index: 9999;">
-    <i class="fa-solid fa-file-arrow-down" style="font-size: 22px; color: #116ae8; margin: 0;"></i>
-    <span style="font-size: 12px; text-align: center; line-height: 1.2;">Tải bài làm xuống</span>
-</a>
+        <i class="fa-solid fa-file-arrow-down" style="font-size: 22px; color: #116ae8; margin: 0;"></i>
+        <span style="font-size: 12px; text-align: center; line-height: 1.2;">Tải bài làm xuống</span>
+    </a>
 
     <div class="box">
-        <h2>Nhiệm vụ 1: Hệ thống tổ chức dữ liệu & Kiến trúc thư mục</h2>
+        <h2>Nhiệm vụ 1: Hệ thống tổ chức dữ liệu &amp; Kiến trúc thư mục</h2>
         <p>Trong môi trường học thuật và kỹ thuật chuyên nghiệp, việc thiết lập một kiến trúc thư mục phân cấp là yếu tố then chốt để đảm bảo tính truy xuất và quản lý dữ liệu hiệu quả. Hệ thống được xây dựng dựa trên cấu trúc hình cây, phân loại từ cấp độ học phần đến từng bài nhiệm vụ cụ thể, giúp giảm thiểu sai sót trong quá trình lưu trữ.</p>
         <p>Logic đặt tên file tuân thủ quy tắc <strong>[MSSV]_[HoTen]_[MaBaiTap]</strong> (ví dụ: <code>25022656_TruongKhaiDang_B01.pdf</code>). Đặc biệt, hệ thống áp dụng kỹ thuật loại bỏ dấu tiếng Việt và khoảng trắng trong tên tệp và thư mục. Phương pháp này đảm bảo tính tương thích đa nền tảng (cross-platform compatibility), ngăn ngừa lỗi encoding khi đồng bộ hóa giữa các hệ điều hành (Windows, macOS, Linux) hoặc khi triển khai trên các hệ thống máy chủ và lưu trữ đám mây.</p>
         
