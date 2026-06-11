@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRƯƠNG KHẢI ĐĂNG | E-Portfolio</title>
-    <!-- Thêm thư viện FontAwesome bản mới nhất để hiện icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #fcfbfa;       /* Màu trắng kem nhạt (Cream) nền Wix */
-            --card-bg: #ffffff;       /* Thẻ màu trắng tinh khiết */
-            --text-color: #1a2b4c;     /* Chữ màu xanh đen đậm quý phái */
+            --bg-color: #fcfbfa;       /* Màu trắng kem nhạt nền Wix */
+            --card-bg: #ffffff;       /* Thẻ màu trắng tinh */
+            --text-color: #1a2b4c;     /* Chữ xanh đen đậm */
             --accent-color: #116ae8;   /* Xanh biển Wix đặc trưng */
             --border-color: #b0c9f0;   /* Viền xanh biển nhạt */
-            --footer-bg: #f4f1ea;     /* Khung chân trang màu kem đậm hơn chút */
         }
 
         body {
@@ -101,12 +99,15 @@
             box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06);
         }
 
+        .intro-box p { text-align: justify; }
+
         .intro-box h2, .evaluation-box h2 {
             color: var(--text-color);
             font-size: 20px;
             margin-top: 0;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .grid-container {
@@ -141,7 +142,6 @@
             box-shadow: 0 10px 20px rgba(17, 106, 232, 0.15);
         }
 
-        /* Định dạng hiển thị Icon chuẩn xác */
         .card i {
             font-size: 38px;
             color: var(--accent-color);
@@ -166,7 +166,7 @@
         .eval-section {
             margin-bottom: 20px;
             padding: 18px;
-            background: #f7f6f0; /* Màu nền kem nhạt cho các khung nhỏ */
+            background: #f7f6f0;
             border-radius: 8px;
             border-left: 4px solid var(--accent-color);
         }
@@ -183,13 +183,9 @@
             gap: 10px;
         }
 
-        .eval-section h3 i {
-            color: var(--accent-color);
-        }
+        .eval-section h3 i { color: var(--accent-color); }
 
         p { line-height: 1.6; font-size: 15px; margin: 0; text-align: justify; }
-
-        hr { border: 0; height: 1px; background: var(--border-color); margin: 35px 0; }
 
         footer {
             text-align: center;
