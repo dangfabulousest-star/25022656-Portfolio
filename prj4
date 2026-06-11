@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm vụ 4 | Hợp tác trực tuyến</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .box { max-width: 800px; width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 35px; box-sizing: border-box; animation: slideUp 0.6s ease-out; }
+        h2 { color: #fff; border-bottom: 2px solid #58a6ff; padding-bottom: 10px; margin-top: 0; }
+        p { line-height: 1.6; text-align: justify; }
+        .wf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 25px 0; }
+        .wf-item { background: #0d1117; padding: 15px; border-radius: 8px; border-top: 3px solid #58a6ff; text-align: center; font-size: 14px; }
+        .back-link { display: inline-block; margin-top: 25px; color: #58a6ff; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Nhiệm vụ 4: Quy trình hợp tác nhóm trực tuyến &amp; Quản trị dự án</h2>
+        <p>Việc thiết lập luồng công việc bất đồng bộ (asynchronous workflows), kết hợp thông báo tự động và hệ thống tài liệu tập trung dưới đây giúp giảm thiểu sai sót trong giao tiếp và tối đa hóa hiệu suất phối hợp nhóm trong dự án thực hành kỹ thuật[cite: 1]:</p>
+        
+        <div class="wf-grid">
+            <div class="wf-item">
+                <strong>Tự động hóa quy trình:</strong><br>Thiết lập quy tắc tự động thông báo qua email/Slack khi hoàn thành task kỹ thuật[cite: 1].
+            </div>
+            <div class="wf-item">
+                <strong>Theo dõi tiến độ Gantt:</strong><br>Trực quan hóa mối liên hệ các nhiệm vụ và quản lý rủi ro trễ tiến độ[cite: 1].
+            </div>
+            <div class="wf-item">
+                <strong>Tài liệu tập trung:</strong><br>Xây dựng Wiki kỹ thuật chung truy cập nhanh thông số và sơ đồ mạch[cite: 1].
+            </div>
+        </div>
+
+        <p><strong>Chiến lược phân bổ trách nhiệm dựa trên năng lực cốt lõi:</strong></p>
+        <p>Phương pháp phân công này giúp loại bỏ hiện tượng chồng chéo nhiệm vụ, làm rõ trách nhiệm giải trình của mỗi thành viên. Hệ quả là thời gian bàn giao giữa các bước trong quy trình được rút ngắn đáng kể, giúp nhóm hoàn thành đồ án sớm hơn so với kế hoạch ban đầu[cite: 1].</p>
+        <ul>
+            <li><strong>Sinh viên Đạt:</strong> Phụ trách xây dựng và chuẩn hóa nội dung chuyên môn (100% Nội dung)[cite: 1].</li>
+            <li><strong>Sinh viên Đoàn:</strong> Thực hiện thiết kế đồ họa và cấu trúc slide trình diễn (100% Thiết kế)[cite: 1].</li>
+            <li><strong>Sinh viên Đăng:</strong> Đảm nhiệm kỹ thuật thu âm và tích hợp giọng đọc nhân tạo bằng AI (100% Hậu kỳ)[cite: 1].</li>
+        </ul>
+        <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
+    </div>
+</body>
+</html>
