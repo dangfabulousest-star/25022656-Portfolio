@@ -14,27 +14,39 @@
             --border-color: #b0c9f0;
         }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; display: flex; flex-direction: column; }
-        h2 { color: var(--text-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-top: 0; }
-        p { line-height: 1.6; text-align: justify; }
+        .box { max-width: 800px; width: 100%; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 35px; box-sizing: border-box; box-shadow: 0 4px 14px rgba(17, 106, 232, 0.06); animation: slideUp 0.6s ease-out; }
+        
+        .header-line { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--accent-color); padding-bottom: 15px; margin-bottom: 20px; gap: 20px; }
+        h2 { color: var(--text-color); margin: 0; font-size: 22px; line-height: 1.3; }
+        
+        .action-block { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+        .download-btn { display: flex; align-items: center; justify-content: center; gap: 8px; color: #ffffff; background-color: var(--accent-color); border: 1px solid var(--accent-color); text-decoration: none; font-weight: bold; padding: 10px 16px; border-radius: 8px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.1); transition: all 0.2s ease; font-size: 13px; white-space: nowrap; }
+        .download-btn:hover { background-color: #0d54b8; transform: translateY(-1px); }
+        .download-btn i { color: #ffffff; margin: 0; font-size: 15px; }
+        .back-link { color: var(--accent-color); text-decoration: none; font-weight: bold; font-size: 13px; white-space: nowrap; }
+        .back-link:hover { text-decoration: underline; }
+        
+        p { line-height: 1.6; text-align: justify; margin: 1em 0; }
         .ethic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0; }
         .ethic-item { background: #f7f6f0; padding: 15px; border-radius: 8px; font-size: 14px; border-left: 4px solid var(--accent-color); border-top: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
         .solution-box { background: var(--card-bg); padding: 20px; border-radius: 10px; margin-top: 25px; border: 1px solid var(--border-color); box-shadow: 0 2px 8px rgba(17, 106, 232, 0.04); }
         .img-box { text-align: center; margin: 25px 0; }
         .img-box img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        
-        .download-btn { display: flex; align-items: center; justify-content: center; gap: 10px; color: #ffffff; background-color: var(--accent-color); border: 1px solid var(--accent-color); text-decoration: none; font-weight: bold; padding: 12px 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(17, 106, 232, 0.15); transition: all 0.2s ease; margin: 30px auto 15px auto; width: fit-content; }
-        .download-btn:hover { background-color: #0d54b8; transform: translateY(-2px); }
-        .download-btn i { color: #ffffff; margin: 0; font-size: 18px; }
-        
-        .back-link { display: inline-block; margin: 10px auto 0 auto; color: var(--accent-color); text-decoration: none; font-weight: bold; width: fit-content; }
-        .back-link:hover { text-decoration: underline; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Nhiệm vụ 6: Bộ nguyên tắc đạo đức &amp; Tư duy phản biện</h2>
+        <div class="header-line">
+            <h2>Nhiệm vụ 6: Bộ nguyên tắc đạo đức &amp; Tư duy phản biện</h2>
+            <div class="action-block">
+                <a href="b06.pdf" download class="download-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Tải bài làm xuống
+                </a>
+                <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
+            </div>
+        </div>
+
         <p>Thiết lập khung tham chiếu đạo đức là điều kiện tiên quyết khi cộng tác với AI trong môi trường học thuật chuyên nghiệp 2026. Sinh viên cần vận dụng tư duy phản biện để đảm bảo tính chính danh và sự minh bạch của tri thức.</p>
         
         <div class="ethic-grid">
@@ -54,13 +66,8 @@
         <div class="solution-box">
             <strong>THÁCH THỨC ĐẠO ĐỨC &amp; GIẢI PHÁP ĐỀ XUẤT</strong>
             <p style="margin-top: 8px; font-size: 14px;"><strong>Thách thức:</strong> Thiên lệch thuật toán (Algorithmic Bias) thông qua việc ưu tiên các giải pháp phổ kiến nhưng không tối ưu cho bối cảnh địa phương; và rủi ro xâm phạm quyền sở hữu trí tuệ vô tình khi AI tái hiện mã nguồn bản quyền. Sự phụ thuộc quá mức có thể dẫn đến "mù quáng thuật toán", nơi sinh viên chấp nhận các sai số hệ thống.</p>
-            <p style="margin-top: 8px; font-size: 14px;"><strong>Giải pháp:</strong> Triển khai quy trình "Human-in-the-loop", nơi con người giữ vai trò quyết định cuối cùng. Sinh viên được khuyến nghị sử dụng kỹ thuật Prompt thách thức (Challenge Prompting) để buộc AI bộc lộ các giới hạn của nó, đồng thời phối hợp với các công cụ kiểm tra đạo văn và AI-detection để tự giám sát tính học thuật.</p>
+            <p style="margin-top: 8px; font-size: 14px;"><strong>Giải pháp:</strong> Triển khai quy trình "Human-in-the-loop", nơi con người giữ vai trò quyết định cuối cùng. Sinh viên được khuyến nghị sử dụng kỹ thuật Prompt thách thức (Challenge Prompting) để buộc AI bộc lộ các giới hạn của nó, đồng thời phối hợp with các công cụ kiểm tra đạo văn và AI-detection để tự giám sát tính học thuật.</p>
         </div>
-
-        <a href="b06.pdf" download class="download-btn">
-            <i class="fa-solid fa-file-arrow-down"></i> Tải bài làm xuống (PDF)
-        </a>
-        <a href="index.html" class="back-link">← Quay lại mục lục chính</a>
     </div>
 </body>
 </html>
