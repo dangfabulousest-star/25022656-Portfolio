@@ -7,12 +7,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-color: #c9d1d9;
-            --accent-color: #58a6ff;
-            --accent-hover: #1f6feb;
-            --border-color: #30363d;
+            --bg-color: #f6f8fa;       /* Nền trắng xám nhạt */
+            --card-bg: #ffffff;       /* Thẻ màu trắng tinh */
+            --text-color: #24292f;     /* Chữ màu đen xám */
+            --accent-color: #0969da;   /* Xanh công nghệ chuẩn */
+            --accent-hover: #0c50a5;
+            --border-color: #d0d7de;   /* Đường viền mảnh */
         }
 
         body {
@@ -31,7 +31,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: fadeInPage 0.8s ease-out;
+            animation: fadeInPage 0.6s ease-out;
         }
 
         header {
@@ -40,7 +40,7 @@
         }
 
         header h1 {
-            color: #fff;
+            color: #24292f;
             font-size: 32px;
             margin-bottom: 5px;
             letter-spacing: 1px;
@@ -50,6 +50,7 @@
             color: var(--accent-color);
             font-size: 16px;
             margin: 5px 0;
+            font-weight: 500;
         }
 
         .intro-box {
@@ -61,13 +62,14 @@
             width: 100%;
             box-sizing: border-box;
             text-align: justify;
+            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
         }
 
         .intro-box h2 {
-            color: #fff;
+            color: #24292f;
             font-size: 20px;
             margin-top: 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
         }
 
@@ -90,12 +92,13 @@
             text-decoration: none;
             color: var(--text-color);
             box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
         }
 
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             border-color: var(--accent-color);
-            box-shadow: 0 10px 20px rgba(88, 166, 255, 0.15);
+            box-shadow: 0 8px 16px rgba(9, 105, 218, 0.15);
         }
 
         .card i {
@@ -105,7 +108,7 @@
         }
 
         .card h3 {
-            color: #fff;
+            color: #24292f;
             margin: 10px 0;
             font-size: 18px;
         }
@@ -113,7 +116,7 @@
         .card p {
             font-size: 14px;
             margin: 0;
-            color: #8b949e;
+            color: #57606a;
         }
 
         .evaluation-box {
@@ -124,10 +127,15 @@
             width: 100%;
             box-sizing: border-box;
             margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(140, 149, 159, 0.1);
         }
 
         .eval-section {
             margin-bottom: 20px;
+            padding: 15px;
+            background: var(--bg-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
         }
 
         .eval-section:last-child {
@@ -135,16 +143,27 @@
         }
 
         .eval-section h3 {
-            color: #fff;
+            color: #24292f;
             font-size: 16px;
+            margin-top: 0;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .eval-section h3 i {
-            color: var(--accent-color);
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+            margin: 0;
+            text-align: justify;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 35px 0;
         }
 
         footer {
@@ -157,8 +176,9 @@
 
         footer p {
             font-style: italic;
-            color: #8b949e;
+            color: #57606a;
             margin-bottom: 15px;
+            text-align: center;
         }
 
         .contact-info {
@@ -175,11 +195,12 @@
             color: var(--accent-color);
             text-decoration: none;
             font-size: 14px;
-            background: #21262d;
+            background: #ffffff;
             padding: 8px 16px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
             transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .contact-item:hover {
@@ -189,7 +210,7 @@
         }
 
         @keyframes fadeInPage {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -208,39 +229,40 @@
             <p style="margin-top: 15px;"><strong>Định hướng tương lai:</strong> Nâng cao hiểu biết chuyên sâu về các hệ thống điều khiển, robot và phát triển phần mềm nhúng thông qua các bài thực hành phòng thí nghiệm nâng cao và chương trình học bám sát thực tiễn công nghiệp.</p>
         </div>
 
-        <h2 style="color: #fff; align-self: flex-start; margin-bottom: 15px;">Mục lục học phần & Các dự án thành phần</h2>
+        <h2 style="color: #24292f; align-self: flex-start; margin-bottom: 15px; font-size: 20px;">Mục lục học phần & Các dự án thành phần</h2>
         <div class="grid-container">
-            <a href="project1.html" class="card">
+            <!-- Đã sửa liên kết ứng với tên prj.html mới của bạn -->
+            <a href="prj1.html" class="card">
                 <i class="fas fa-folder-tree"></i>
                 <h3>Nhiệm vụ 1</h3>
                 <p>Hệ thống tổ chức dữ liệu & Kiến trúc thư mục chuẩn hóa</p>
             </a>
 
-            <a href="project2.html" class="card">
+            <a href="prj2.html" class="card">
                 <i class="fas fa-shield-halved"></i>
                 <h3>Nhiệm vụ 2</h3>
                 <p>Tiêu chí kiểm chứng nguồn tin học thuật chuyên sâu</p>
             </a>
 
-            <a href="project3.html" class="card">
+            <a href="prj3.html" class="card">
                 <i class="fas fa-brain"></i>
                 <h3>Nhiệm vụ 3</h3>
                 <p>Kỹ nghệ cấu trúc câu lệnh Prompt Engineering</p>
             </a>
 
-            <a href="project4.html" class="card">
+            <a href="prj4.html" class="card">
                 <i class="fas fa-users-gear"></i>
                 <h3>Nhiệm vụ 4</h3>
                 <p>Hợp tác trực tuyến & Quản trị luồng công việc bất đồng bộ</p>
             </a>
 
-            <a href="project5.html" class="card">
+            <a href="prj5.html" class="card">
                 <i class="fas fa-photo-film"></i>
                 <h3>Nhiệm vụ 5</h3>
                 <p>Thiết kế kịch bản & Sản xuất nội dung đa phương tiện bằng AI</p>
             </a>
 
-            <a href="project6.html" class="card">
+            <a href="prj6.html" class="card">
                 <i class="fas fa-scale-balanced"></i>
                 <h3>Nhiệm vụ 6</h3>
                 <p>Bộ nguyên tắc đạo đức & Tư duy phản biện khi tương tác với AI</p>
@@ -248,10 +270,10 @@
         </div>
 
         <div class="evaluation-box">
-            <h2 style="color: #fff; font-size: 20px; margin-top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Tổng kết & Đánh giá bản thân</h2>
+            <h2 style="color: #24292f; font-size: 20px; margin-top: 0; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px;">Tổng kết & Đánh giá bản thân</h2>
             
             <div class="eval-section">
-                <h3><i class="fas fa-bookmark"></i> 8.1. Kiến thức & Kỹ năng đạt được</h3>
+                <h3><i class="fas fa-graduation-cap"></i> 8.1. Kiến thức & Kỹ năng đạt được</h3>
                 <p>Học phần đã tạo bước đột phá lớn trong tư duy quản trị dữ liệu và khai thác công nghệ số. Bản thân đã làm chủ kỹ năng tối ưu hóa câu lệnh (Prompt Engineering) qua các kỹ thuật nâng cao (Chain-of-Thought, ELI5), cấu trúc quy trình làm việc nhóm bất đồng bộ trên Trello, và thiết lập hệ thống tệp tin khoa học theo tư duy logic hệ thống.</p>
             </div>
 
@@ -280,7 +302,7 @@
                     <i class="fas fa-university"></i> ĐH Công Nghệ - ĐHQGHN
                 </div>
             </div>
-            <p style="margin-top: 25px; font-size: 12px; font-style: normal; color: #8b949e;">&copy; 2026 Truong Khai Dang. All rights reserved.</p>
+            <p style="margin-top: 25px; font-size: 12px; font-style: normal; color: #57606a;">&copy; 2026 Truong Khai Dang. All rights reserved.</p>
         </footer>
     </div>
 
